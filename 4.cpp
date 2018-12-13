@@ -2,11 +2,13 @@
 using namespace std;
 int main() 
 {
-int a,b,c;
+int a,b,c;  
+do
+{
 cout <<"請輸入運算符號:(1:+,2:-,3:*,4:/)";
 cin >> a;
-if (a<1 || a>4)
-{cout <<"請輸入1,2,3,4\n";return 0;}
+}
+while(a<1 || a>4);
 cout <<"請輸入第一個數字:";
 cin >> b;
 cout <<"請輸入第二個數字:";
