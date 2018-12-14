@@ -1,18 +1,23 @@
 #include <iostream>
 using namespace std;
-
-int main(){
+int main() {
 int height;
 do
+{cout << "請輸入三角形高度(1-8):";
+cin >> height;}
+while (height<1 || height>8); 
 {
-cout <<"請輸入1-8的一個數字:";
-cin >> height;
+for (int a=0;a<height;a++)
+{
+for (int b=height;b>a;b--) 
+{cout << " ";}
+for (int b=0;b<=a;b++) 
+{cout << "#";}
+cout << "  ";
+for (int b=0;b<=a;b++)
+{cout << "#";}
+cout << "\n";
 }
-while(height<1 || height>8);
-for(int x=1; x<height+1; x++){
-for(int y=height; y>x; y--){
-cout<< " ";}
-for(int y=1; y<=x; y++){
-cout<< "#";}
-cout<< "\n";}
+cout << "高度:" << height << "\n";
+}
 }
